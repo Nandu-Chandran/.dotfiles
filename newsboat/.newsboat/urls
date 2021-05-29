@@ -1,3 +1,10 @@
+# query feeds
+"query:Unread Articles:unread = \"yes\" and tags !# \"pouet\" and tags !# \"page2rss\" and tags !# \"xiv\""
+"query:Unread Articles (1 year old):unread = \"yes\" and tags !# \"pouet\" and tags !# \"page2rss\" and tags !# \"xiv\" and age between 0:365"
+"query:Unread Articles (1 month old):unread = \"yes\" and tags !# \"pouet\" and tags !# \"page2rss\" and tags !# \"xiv\" and age between 0:31"
+"query:Unread Articles (1 week old):unread = \"yes\" and tags !# \"pouet\" and tags !# \"page2rss\" and tags !# \"xiv\" and age between 0:7"
+"query:Unread Articles (favourite):unread = \"yes\" and tags # \"favourite\""
+
 --------------
 ----BLOG------
 --------------
@@ -35,10 +42,10 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC0ZTPkdxlAKf-V33tqXwi3Q
 https://www.youtube.com/feeds/videos.xml?channel_id=UCTfabOKD7Yty6sDF4POBVqA
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVeW9qkBjo3zosnqUbG7CFw
 https://www.youtube.com/feeds/videos.xml?channel_id=UC3oollg7TNYuK7tvS1enOoA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCWr0mx597DnSGLFk1WfvSkQ "Kalle Hallden"
-https://www.youtube.com/feeds/videos.xml?channel_id=UClcE-kVhqyiHCcjYwcpfj9w "LiveOverflow"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "Luke Smith"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "Mental Outlaw"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCWr0mx597DnSGLFk1WfvSkQ "Kalle Hallden" "tech"
+https://www.youtube.com/feeds/videos.xml?channel_id=UClcE-kVhqyiHCcjYwcpfj9w "LiveOverflow" "tech"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA "Luke Smith" "tech"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "Mental Outlaw" "tech"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC6vcadTSSQKVsdOudnbqwtg "Mossy Bottom"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCrdWRLq10OHuy7HmSckV3Vg "Nathaniel Drew"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCZbOmMsPgxuWmj5pGymAOnA "No Backup Plan"
@@ -46,6 +53,5 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCgTNupxATBfWmfehv21ym-g "Nu
 https://www.youtube.com/feeds/videos.xml?channel_id=UCYVU6rModlGxvJbszCclGGw "Rob Braxman Tech"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCjr2bPAyPV7t35MvcgT3W8Q "The Hated One"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCXXeFzaAvvwEbUKAXsu_yrA "Trout and Coffee"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCSCRVmBT1YyuAlCA8c9FJRA "The Nomadic Movement"
 
 
