@@ -1,5 +1,5 @@
 #show-read-feeds no
-auto-reload no
+auto-reload yes
 
 external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 
@@ -29,10 +29,13 @@ color listfocus_unread yellow default bold
 color info red black bold
 color article white default bold
 
-browser firefox
+browser lynx
 macro , open-in-browser
 macro t set browser "qndl" ; open-in-browser ; set browser linkhandler
-macro y set browser "tsp youtube-dl -f 'bestvideo[height=?360][fps<=?30][vcodec!=?vp9]+bestaudio/best' %u" ; open-in-browser ; set browser "firefox" 
+
+macro y set browser "ts youtube-dl -f 'bestvideo[height=?360][fps<=?30][vcodec!=?vp9]+bestaudio/best' %u" ; open-in-browser ; set browser "lynxx" 
+macro d set browser "ts youtube-dl --get-duration|termux-notification";open-in-browser ; set browser "lynx"
+
 macro v set browser "setsid -f mpv --really-quiet --no-terminal" ; open-in-browser ; set browser firefox
 macro w set browser "lynx" ; open-in-browser ; set browser linkhandler
 macro W set browser "surf -f" ; open-in-browser ; set browser linkhandler
