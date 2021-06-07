@@ -16,7 +16,7 @@ set tabstop=4 softtabstop=4
 set expandtab
 set noswapfile
 set nobackup
-
+set number relativenumber
 set undodir=~/.vim/undodir
 set undofile
 
@@ -30,9 +30,35 @@ Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'vim-utils/vim-man'
 Plug 'tpope/vim-fugitive'
+Plug 'vimwiki/vimwiki'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
 
 colorscheme gruvbox
 set background=dark
+
+"vimwiki
+set nocompatible
+filetype plugin on
+"comment on markdown files
+autocmd Filetype vimwiki setlocal commentstring=<!--%s-->
+
+let g:vimwiki_list = [{'path':'~/Documents/vimwiki/','syntax':'markdown','ext':'.md'}]
+let g:vimwiki_ext2syntax = {'.md':'markdown','.markdown':'markdown','.mdown':'markdown'}
+
+let g:vimwiki_markdown_link_ext = 1
+
+let g:markdown_folding = 1
+
+"let g:vimwiki_list = [{
+"    \ 'path': '~/Documents/vimwiki/',
+"    \ 'path_html': '~/Documents/vimwiki/site/',
+"    \ 'custom_wiki2html': '~/.dotfiles/vimwiki/wiki2html.py',
+"    \ 'template_path': '~/Documents/vimwiki/templates',
+"    \ 'template_default':'default',
+"    \ 'template_ext':'.html',
+"    \ 'syntax': 'markdown',
+"    \ 'ext': '.md',
+"    \ }]
