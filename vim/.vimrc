@@ -24,6 +24,12 @@ set noerrorbells
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+"copy paste
+vnoremap <C-c> "+y
+map <C-p> "+p
+
+
+"vim plugs
 call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
