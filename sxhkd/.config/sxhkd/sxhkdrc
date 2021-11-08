@@ -1,0 +1,23 @@
+#Volume
+XF86AudioLowerVolume
+    amixer set Master 5%-
+XF86AudioRaiseVolume
+    amixer set Master 5%+
+
+#Mocp
+XF86AudioStop
+    mocp --stop
+XF86AudioPlay
+    mocp --toggle-pause
+XF86AudioPrev
+    mocp --previous
+XF86AudioNext
+    mocp --next
+
+
+#Brightness
+XF86MonBrightnessUp
+    xbacklight +2
+XF86MonBrightnessDown
+    xbacklight -2
+
