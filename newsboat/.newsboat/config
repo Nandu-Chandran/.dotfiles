@@ -1,5 +1,5 @@
 #show-read-feeds no
-auto-reload yes
+auto-reload no 
 
 external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 
@@ -33,8 +33,8 @@ browser firefox
 macro , open-in-browser
 macro t set browser "qndl" ; open-in-browser ; set browser linkhandler
 
-macro y set browser "ts youtube-dl -f 'bestvideo[height=?360][fps<=?30][vcodec!=?vp9]+bestaudio/best' %u" ; open-in-browser ; set browser "lynxx" 
-macro d set browser "ts youtube-dl --get-duration|termux-notification";open-in-browser ; set browser "lynx"
+macro y set browser "tsp youtube-dl -f 'bestvideo[height=?360][fps<=?30][vcodec!=?vp9]+bestaudio/best' %u" ; open-in-browser ; set browser "lynxx" 
+macro d set browser "youtube-dl --get-duration %u | xargs -I SUB notify-send Video-Length: SUB";open-in-browser ; set browser "lynx"
 
 macro v set browser "setsid -f mpv " ; open-in-browser ; set browser firefox
 macro w set browser "lynx" ; open-in-browser ; set browser linkhandler
