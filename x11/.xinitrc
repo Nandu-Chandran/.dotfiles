@@ -14,4 +14,6 @@ else
 	. "$HOME/.xprofile"
 fi
 
+
 ssh-agent dwm
+sxhkd &

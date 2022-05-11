@@ -14,13 +14,9 @@ HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
+shopt -s autocd
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
+HISTSIZE=HISTFILESIZE= #
 shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
@@ -87,15 +83,84 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-
-# some more aliases
+# some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias mnt='udisksctl mount -b /dev/nvme0n1p3 && cd /media/nc/Windows-SSD/Users/nandu'
+alias umnt='cd && udisksctl unmount -b /dev/nvme0n1p3'
+alias ydl-audio='youtube-dl -f "bestaudio/best" -ciw -o "%(title)s.%(ext)s" -v --extract-audio --audio-quality 0 --audio-format mp3'
+
+
 alias sdn='sudo shutdown now'
-alias ls='ls -ahN --group-directories-first'
+alias srn='sudo reboot now'
+
+alias vi='vim'
 alias r='ranger'
-alias yt='youtube-dl --add-metadata'
+alias fopen="thunar . 2>&1"
+
+
+
+
+alias desk="cd ~/Desktop"
+alias down="cd ~/Downloads"
+alias musi='cd ~/music'
+alias ssd='cd /media/nc/Windows-SSD/Users/nandu'
+alias ssdp='cd /media/nc/Windows-SSD/Users/nandu/Pictures'
+alias ssdv='cd /media/nc/Windows-SSD/Users/nandu/Videos'
+alias yt='cd ~/vids/yt'
+
+
+
+
+alias .="cd"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+alias .1="cd .."
+alias .2="cd ../.."
+alias .3="cd ../../.."
+alias .4="cd ../../../.."
+alias .5="cd ../../../../.."
+
+alias gs="git status"
+alias gal="git add ."
+alias gall="git add ."
+alias gca="git commit -a"
+alias gc="git commit -m"
+alias go="git push -u origin"
+
+alias h="history"
+alias h1="history 10"
+alias h2="history 20"
+alias h3="history 30"
+alias hgrep='history | grep'
+
+alias pg="ping gnu.org -c 5"
+
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+alias rm='rm -I --preserve-root'
+
+
+
+
+alias cpy="xclip -selection clipboard"
+alias pwdcp="pwd | cpy"
+
+alias showgpu="watch -d -n 0.5 nvidia-smi"
+
+function myip(){
+       myip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+       echo "My WAN/Public IP address: ${myip}"
+ }
+
+
+
+
 
 
 
@@ -109,19 +174,19 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+    source ~/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
+#if ! shopt -oq posix; then
+#  if [ -f /usr/share/bash-completion/bash_completion ]; then
+#    . /usr/share/bash-completion/bash_completion
+#  elif [ -f /etc/bash_completion ]; then
+#    . /etc/bash_completion
+#  fi
+#fi
+#. "$HOME/.cargo/env"
 
-
-export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/.scripts:$PATH"
