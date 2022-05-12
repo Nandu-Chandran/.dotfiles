@@ -1,3 +1,7 @@
-myconfig.sh 
 setbg &
 sxhkd &
+if [ "$GDMSESSION" = "dwm" ]
+then
+    xcompmgr -c &
+
+fi
