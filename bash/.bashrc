@@ -17,6 +17,7 @@ shopt -s histappend
 shopt -s autocd
 
 HISTSIZE=HISTFILESIZE= #
+HISTTIMEFORMAT="%d/%m/%y  "
 shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will

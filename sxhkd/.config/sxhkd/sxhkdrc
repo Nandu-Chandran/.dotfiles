@@ -1,3 +1,8 @@
+super + shift + Esc
+    pkill -USR1 -x sxhkd
+
+
+
 #Programs
 super + w
     brave-browser
@@ -6,3 +11,6 @@ super + w
 #Scripts
 super + alt + m 
     bm.sh 
+super + alt + d
+    st vi -c ":VimwikiMakeDiaryNote"
+
