@@ -118,10 +118,13 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #list
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
+#alias ll='ls -alF'
+#alias la='ls -A'
+#alias l='ls -CF'
+alias l='exa'
+alias la='exa -a'
+alias ll='exa -lah'
+#alias ls='exa --grid --color=auto '
 ##nav
 alias .="cd"
 alias ..="cd .."
@@ -136,6 +139,7 @@ alias .3="cd ../../.."
 alias .4="cd ../../../.."
 alias .5="cd ../../../../.."
 
+alias zz="z -"
 #pwr
 alias sdn='sudo shutdown now'
 alias srn='sudo reboot now'
@@ -185,4 +189,6 @@ alias yt='cd ~/vids/yt'
 alias rH='source Hera/bin/activate && cd pjt/Hera && python hera.py'
 alias de='deactivate'
 alias pg="ping gnu.org -c 5"
+
+eval "$(zoxide init zsh)"
 
