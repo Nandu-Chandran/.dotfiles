@@ -5,8 +5,13 @@ super + shift + Esc
 
 #Programs
 super + w
-    brave-browser
-
+    dmenu-qutebrowser    
+super + e 
+    thunar
+super + shift + w 
+    brave-browser --app=https://web.whatsapp.com/
+super + n
+    newsboat
 
 #Scripts
 super + alt + m 
