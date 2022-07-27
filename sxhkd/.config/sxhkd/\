@@ -1,5 +1,5 @@
 super + shift + Esc
-    pkill -USR1 -x sxhkd & sxhkd
+    pkill -USR1 -x sxhkd 
 
 
 
@@ -12,10 +12,8 @@ super + shift + w
     brave --app=https://web.whatsapp.com/
 super + n
     newsboat
-super + t
-    brave --app=https://web.skype.com/ & brave --app=https://outlook.office.com/ & brave --app=http://hub.thinkpalm.info/
-super + shift + l
-    slock
+super + s
+    brave --app=https://web.skype.com/ & brave --app=https://outlook.office.com/
 
 #Scripts
 super + alt + m 

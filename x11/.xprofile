@@ -1,7 +1,8 @@
-setbg &
-sxhkd &
 if [ "$GDMSESSION" = "dwm" ]
 then
+    
+    feh --bg-scale ~/Pictures/wall/1.jpg &
+    sxhkd &
+    slstatus &
     xcompmgr -c &
-
 fi
