@@ -13,7 +13,7 @@ super + shift + w
 super + n
     newsboat
 super + t
-    brave --app=https://web.skype.com/ & brave --app=https://outlook.office.com/ & brave --app=http://hub.thinkpalm.info/
+    brave --app=https://outlook.office.com/ &  brave --app=https://web.skype.com/ & brave --app=http://hub.thinkpalm.info/ 
 super + shift + l
     slock
 

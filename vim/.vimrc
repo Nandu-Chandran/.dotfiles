@@ -24,11 +24,11 @@ set cursorcolumn
 set history=1000
 set wildmenu
 set wildmode=list:longest
-highlight ColorColumn  guibg=lightgrey
+set t_Co=256
+
+"highlight ColorColumn  guibg=lightgrey
 
 
-colorscheme gruvbox
-set background=dark
 
 "copy paste
 vnoremap <C-c> "+y
@@ -62,6 +62,10 @@ Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/nerdtree'
 
 call plug#end()
+
+colorscheme gruvbox
+set background=dark
+
 
 "vimwiki
 set nocompatible
