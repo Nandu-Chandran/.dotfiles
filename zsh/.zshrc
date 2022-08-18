@@ -91,8 +91,7 @@ SAVEHIST=$HISTSIZE
 plugins=(
     git
     zsh-autosuggestions 
-    vi-mode
-    zsh-syntax-highlighting
+#    zsh-syntax-highlighting
     )
 
 source $ZSH/oh-my-zsh.sh
@@ -130,10 +129,11 @@ source $ZSH/oh-my-zsh.sh
 #alias ll='ls -alF'
 #alias la='ls -A'
 #alias l='ls -CF'
-alias l='exa'
-alias la='exa -a'
-alias ll='exa -lah'
+#alias l='exa'
+#alias la='exa -a'
+#alias ll='exa -lah'
 #alias ls='exa --grid --color=auto '
+
 ##nav
 alias .="cd"
 alias ..="cd .."

@@ -1,40 +1,28 @@
-syntax on
-set showcmd		" Show (partial) command in status line.
-set showmatch		" Show matching brackets.
-set ignorecase		" Do case insensitive matching
-set smartcase		" Do smart case matching
-set incsearch		" Incremental search
-set autowrite		" Automatically save before commands like :next and :make
-set hidden		" Hide buffers when they are abandoned
-set mouse=a		"Enable mouse usage (all modes)
-set shiftwidth=4
-set smartindent
-set nu
-set nowrap
-set tabstop=4 softtabstop=4
-set expandtab
-set noswapfile
-set nobackup
-set number relativenumber
-set undodir=~/.vim/undodir
-set undofile
-set noerrorbells
-set cursorline
-set cursorcolumn
-set history=1000
-set wildmenu
-set wildmode=list:longest
-set t_Co=256
+set nocompatible            " disable compatibility to old-time vi
+set showmatch               " show matching
+set ignorecase              " case insensitive
+set mouse=v                 " middle-click paste with
+set hlsearch                " highlight search
+set incsearch               " incremental search
+set tabstop=4               " number of columns occupied by a tab
+set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
+set expandtab               " converts tabs to white space
+set shiftwidth=4            " width for autoindents
+set autoindent              " indent a new line the same amount as the line just typed
+set number                  " add line numbers
+set wildmode=longest,list   " get bash-like tab completions
+set cc=80                  " set an 80 column border for good coding style
+filetype plugin indent on   "allow auto-indenting depending on file type
+syntax on                   " syntax highlighting
+set mouse=a                 " enable mouse click
+set clipboard=unnamedplus   " using system clipboard
+filetype plugin on
+set cursorline              " highlight current cursorline
+set ttyfast                 " Speed up scrolling in Vim
+" set spell                 " enable spell check (may need to download language package)
+" set noswapfile            " disable creating swap file
+" set backupdir=~/.cache/vim " Directory to store backup files.
 
-"highlight ColorColumn  guibg=lightgrey
-
-
-
-"copy paste
-vnoremap <C-c> "+y
-map <C-p> "+p
-nnoremap <leader>y "*y
-nnoremap <leader>p "*p
 
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -47,41 +35,19 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
-
-"vim plugs
-call plug#begin('~/.vim/plugged')
-
-Plug 'morhetz/gruvbox'
-Plug 'jremmen/vim-ripgrep'
-Plug 'vim-utils/vim-man'
-Plug 'tpope/vim-fugitive'
-Plug 'vimwiki/vimwiki'
-Plug 'tpope/vim-commentary'
-Plug 'junegunn/goyo.vim'
-Plug 'flazz/vim-colorschemes'
-Plug 'scrooloose/nerdtree'
-
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ 
+call plug#begin("~/.vim/plugged")
+ " Plugin Section
+ Plug 'dracula/vim'
+ Plug 'ryanoasis/vim-devicons'
+ Plug 'SirVer/ultisnips'
+ Plug 'honza/vim-snippets'
+ Plug 'scrooloose/nerdtree'
+ Plug 'preservim/nerdcommenter'
+ Plug 'mhinz/vim-startify'
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-colorscheme gruvbox
-set background=dark
-
-
-"vimwiki
-set nocompatible
-filetype plugin on
-"comment on markdown files
-autocmd Filetype vimwiki setlocal commentstring=<!--%s-->
-
-let g:vimwiki_list = [{'path':'~/notes/','syntax':'markdown','ext':'.md'}]
-let g:vimwiki_ext2syntax = {'.md':'markdown','.markdown':'markdown','.mdown':'markdown'}
-let g:vimwiki_markdown_link_ext = 1
-let g:markdown_folding = 1
-
-nnoremap <leader>nh :term<CR>
-inoremap jj <esc>
 
 
 " Some servers have issues with backup files, see #649.
