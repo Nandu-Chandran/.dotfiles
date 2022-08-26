@@ -1,4 +1,4 @@
-super + shift + Esc
+super + shift + esc
     pkill -USR1 -x sxhkd & sxhkd
 
 
@@ -18,6 +18,8 @@ super + alt + t
     brave --app=https://outlook.office.com/ &  brave --app=https://web.skype.com/ & brave --app=http://hub.thinkpalm.info/ 
 super + shift + l
     slock
+super + Pause
+    echo cycle pause | socat - "/home/nc/.config/mpv/socket"
 
 #Scripts
 super + alt + m 

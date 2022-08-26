@@ -1,7 +1,7 @@
 if [ "$GDMSESSION" = "dwm" ]
 then
     
-    feh --bg-scale ~/Pictures/wall/1.jpg &
+    feh --bg-scale --randomize ~/Pictures/wall/ &
     sxhkd &
     slstatus &
     xcompmgr -c &
