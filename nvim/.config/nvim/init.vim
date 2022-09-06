@@ -19,9 +19,20 @@ set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
+set termguicolors
+
 " set spell                 " enable spell check (may need to download language package)
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
+"copy paste
+vnoremap <C-c> "+y
+map <C-p> "+p
+nnoremap <leader>y "*y
+nnoremap <leader>p "*p
+"
+nnoremap <leader>nh :term<CR>
+inoremap jj <esc> 
+
 
 
 " Install vim-plug if not found
@@ -46,7 +57,9 @@ call plug#begin("~/.vim/plugged")
  Plug 'preservim/nerdcommenter'
  Plug 'mhinz/vim-startify'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
+ Plug 'morhetz/gruvbox'
+ Plug 'folke/tokyonight.nvim', { 'branch': 'main' } 
+ call plug#end()
 
 
 
