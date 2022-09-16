@@ -26,4 +26,5 @@ super + alt + m
     bm.sh 
 super + alt + d
     st vi -c ":VimwikiMakeDiaryNote"
-
+super + shift + x
+    shutdown_routine
