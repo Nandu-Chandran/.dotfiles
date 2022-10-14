@@ -10,8 +10,6 @@ super + e
     thunar
 super + shift + w 
     brave --app=https://web.whatsapp.com/
-super + n
-    newsboat
 super + alt + y
     brave --app=https://www.youtube.com/
 super + alt + t
