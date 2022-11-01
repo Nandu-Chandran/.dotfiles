@@ -164,7 +164,7 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 #   - true
 #   - false
 #   - ask
-#config.set('content.notifications.enabled', True, 'https://www.reddit.com')
+config.set('content.notifications.enabled', True, 'https://www.reddit.com')
 
 # Allow websites to show notifications.
 # Type: BoolAsk
@@ -172,12 +172,12 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 #   - true
 #   - false
 #   - ask
-#config.set('content.notifications.enabled', True, 'https://www.youtube.com')
+config.set('content.notifications.enabled', True, 'https://www.youtube.com')
 
 # Directory to save downloads to. If unset, a sensible OS-specific
 # default is used.
 # Type: Directory
-c.downloads.location.directory = '~/dl'
+c.downloads.location.directory = '~/Downloads'
 
 # When to show the tab bar.
 # Type: String
@@ -190,7 +190,8 @@ c.tabs.show = 'always'
 
 # Setting default page for when opening new tabs or new windows with
 # commands like :open -t and :open -w .
-c.url.default_page = 'file://~/.surf/html/homepage.html'
+c.url.default_page = 'https://distro.tube/'
+c.url.start_pages = 'https://distro.tube/'
 
 # Search engines which can be used via the address bar.  Maps a search
 # engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`
@@ -210,7 +211,7 @@ c.url.default_page = 'file://~/.surf/html/homepage.html'
 # the search engine name to the search term, e.g. `:open google
 # qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'am': 'https://www.amazon.com/s?k={}', 'goog': 'https://www.google.com/search?q={}', 'sp': 'https://www.startpage.com/search?q={}', 're': 'https://www.reddit.com/r/{}', 'wiki': 'https://en.wikipedia.org/wiki/{}', 'yt': 'https://www.youtube.com/results?search_query={}','wi':'https://www.wiby.me/?q={}'}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'am': 'https://www.amazon.com/s?k={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'goog': 'https://www.google.com/search?q={}', 'hoog': 'https://hoogle.haskell.org/?hoogle={}', 're': 'https://www.reddit.com/r/{}', 'ub': 'https://www.urbandictionary.com/define.php?term={}', 'wiki': 'https://en.wikipedia.org/wiki/{}', 'yt': 'https://www.youtube.com/results?search_query={}'}
 
 # Text color of the completion widget. May be a single color to use for
 # all columns or a list of three colors, one for each column.
@@ -345,7 +346,7 @@ c.colors.tabs.pinned.selected.even.bg = '#282c34'
 # font setting, it's replaced with the fonts listed here. If set to an
 # empty value, a system-specific monospace default is used.
 # Type: List of Font, or Font
-c.fonts.default_family = '"Fira Code"'
+c.fonts.default_family = '"Source Code Pro"'
 
 # Default font size to use. Whenever "default_size" is used in a font
 # setting, it's replaced with the size listed here. Valid values are
@@ -356,11 +357,11 @@ c.fonts.default_size = '11pt'
 
 # Font used in the completion widget.
 # Type: Font
-c.fonts.completion.entry = '11pt "Fira Code"'
+c.fonts.completion.entry = '11pt "Source Code Pro"'
 
 # Font used for the debugging console.
 # Type: Font
-c.fonts.debug_console = '11pt "Fira Code"'
+c.fonts.debug_console = '11pt "Source Code Pro"'
 
 # Font used for prompts.
 # Type: Font
@@ -368,15 +369,15 @@ c.fonts.prompts = 'default_size sans-serif'
 
 # Font used in the statusbar.
 # Type: Font
-c.fonts.statusbar = '11pt "Fira Code"'
+c.fonts.statusbar = '11pt "Source Code Pro"'
 
 # Bindings to use dmenu rather than qutebrowser's builtin search.
 #config.bind('o', 'spawn --userscript dmenu-open')
 #config.bind('O', 'spawn --userscript dmenu-open --tab')
 
 # Bindings for normal mode
-#config.bind('M', 'hint links spawn mpv {hint-url}')
-#config.bind('Z', 'hint links spawn st -e youtube-dl {hint-url}')
+config.bind('M', 'hint links spawn mpv {hint-url}')
+config.bind('Z', 'hint links spawn st -e youtube-dl {hint-url}')
 config.bind('t', 'set-cmd-text -s :open -t')
 config.bind('xb', 'config-cycle statusbar.show always never')
 config.bind('xt', 'config-cycle tabs.show always never')
@@ -384,8 +385,8 @@ config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.
 
 # Bindings for cycling through CSS stylesheets from Solarized Everything CSS:
 # https://github.com/alphapapa/solarized-everything-css
-config.bind(',ap', 'config-cycle content.user_stylesheets ~/solarized-everything-css/css/apprentice/apprentice-all-sites.css ""')
-config.bind(',dr', 'config-cycle content.user_stylesheets ~/solarized-everything-css/css/darculized/darculized-all-sites.css ""')
-config.bind(',gr', 'config-cycle content.user_stylesheets ~/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css ""')
-config.bind(',sd', 'config-cycle content.user_stylesheets ~/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""')
-config.bind(',sl', 'config-cycle content.user_stylesheets ~/solarized-everything-css/css/solarized-light/solarized-light-all-sites.css ""')
+config.bind(',ap', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/apprentice/apprentice-all-sites.css ""')
+config.bind(',dr', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/darculized/darculized-all-sites.css ""')
+config.bind(',gr', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/gruvbox/gruvbox-all-sites.css ""')
+config.bind(',sd', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-dark/solarized-dark-all-sites.css ""')
+config.bind(',sl', 'config-cycle content.user_stylesheets ~/.config/qutebrowser/solarized-everything-css/css/solarized-light/solarized-light-all-sites.css ""')
