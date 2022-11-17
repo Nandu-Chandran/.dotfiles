@@ -1,7 +1,19 @@
 super + shift + esc
     pkill -USR1 -x sxhkd & sxhkd
 
-
+#Function
+F1
+    amixer set Master 2%+;
+F2
+    amixer set Master 2%-;
+F5
+    brave
+F6
+    chromium
+F7 
+    qutebrowser
+F12
+    ydlplay
 
 #Programs
 super + w
@@ -16,7 +28,7 @@ super + alt + t
     brave --app=https://outlook.office.com/ &  brave --app=https://web.skype.com/ & brave --app=http://hub.thinkpalm.info/ 
 super + shift + l
     slock
-super + Pause
+Pause
     echo cycle pause | socat - "/home/nc/.config/mpv/socket"
 
 #Scripts
