@@ -65,7 +65,7 @@ call plug#begin("~/.vim/plugged")
 
  call plug#end()
 
-colorscheme gruvbox
+colorscheme tokyonight 
 set background=dark
 
 
