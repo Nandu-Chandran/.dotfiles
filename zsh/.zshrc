@@ -177,11 +177,11 @@ alias mnt='udisksctl mount -b /dev/nvme0n1p3 && cd /media/nc/Windows-SSD/Users/n
 alias umnt='cd && udisksctl unmount -b /dev/nvme0n1p3'
 
 #apps
-alias vi='vim'
+alias v='vim'
 alias r='ranger'
 alias fopen="thunar . 2>&1"
 alias ydl-audio='youtube-dl -f "bestaudio/best" -ciw -o "%(title)s.%(ext)s" -v --extract-audio --audio-quality 0 --audio-format mp3'
-
+alias nv='~/nvim.appimage'
 #folder shortcuts
 alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"
