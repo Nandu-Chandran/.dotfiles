@@ -22,12 +22,12 @@ export KEYTIMEOUT=1
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -182,6 +182,7 @@ alias r='ranger'
 alias fopen="thunar . 2>&1"
 alias ydl-audio='youtube-dl -f "bestaudio/best" -ciw -o "%(title)s.%(ext)s" -v --extract-audio --audio-quality 0 --audio-format mp3'
 alias nv='~/nvim.appimage'
+
 #folder shortcuts
 alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"
@@ -195,6 +196,12 @@ alias yt='cd ~/vids/yt'
 alias rH='source Hera/bin/activate && cd pjt/Hera && python hera.py'
 alias de='deactivate'
 alias pg="ping gnu.org -c 5"
+alias tpstat="python3 ~/pjt/thinkpalm/swipe_details/swipe_details.py"
+alias open= xdg-open
+alias tp=tpstat
+
+
+
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
