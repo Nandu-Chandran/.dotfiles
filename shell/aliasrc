@@ -1,0 +1,65 @@
+#list
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+#alias l='exa'
+#alias la='exa -a'
+#alias ll='exa -lah'
+#alias ls='exa --grid --color=auto '
+
+#nav
+alias .="cd"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
+alias .1="cd .."
+alias .2="cd ../.."
+alias .3="cd ../../.."
+alias .4="cd ../../../.."
+alias .5="cd ../../../../.."
+
+alias zz="z -"
+#pwr
+alias sdn='sudo shutdown now'
+alias srn='sudo reboot now'
+
+#git
+alias gs="git status"
+alias gal="git add ."
+alias gall="git add ."
+alias gca="git commit -a"
+alias gc="git commit -m"
+alias go="git push -u origin"
+
+#history
+alias h="history"
+alias hs='history'
+alias h1="history 10"
+alias h2="history 20"
+alias h3="history 30"
+alias hgrep='history | grep'
+
+#copy move
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+alias rm='rm -I --preserve-root'
+
+#mount ssd
+alias mnt='udisksctl mount -b /dev/nvme0n1p3 && cd /media/nc/Windows-SSD/Users/nandu'
+alias umnt='cd && udisksctl unmount -b /dev/nvme0n1p3'
+
+#apps
+alias v='vim'
+alias r='ranger'
+alias fopen="thunar . 2>&1"
+alias ydl-audio='youtube-dl -f "bestaudio/best" -ciw -o "%(title)s.%(ext)s" -v --extract-audio --audio-quality 0 --audio-format mp3'
+alias nv='~/nvim.appimage'
+
+alias pg="ping gnu.org -c 5"
+alias open="xdg-open"
+alias tp="tpstat"
+alias hsr='history | cut -c 8- | sort | uniq | fzf | tr -d '\n'| xclip -sel c'
