@@ -1,11 +1,11 @@
 #list
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-#alias l='exa'
-#alias la='exa -a'
-#alias ll='exa -lah'
-#alias ls='exa --grid --color=auto '
+#alias ll='ls -alF'
+#alias la='ls -A'
+#alias l='ls -CF'
+alias l='exa'
+alias la='exa -a'
+alias ll='exa -lah'
+alias ls='exa --grid --color=auto '
 
 #nav
 alias .="cd"
