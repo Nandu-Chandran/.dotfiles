@@ -1,8 +1,10 @@
 #Prereq 
 # https://github.com/zsh-users/zsh-syntax-highlighting
+# ohmyposh
+# zoxide
 
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+PS1="%B%{$fg[red]%}[%{$fg[red]%}%n%{$fg[red]%}@%{$fg[red]%}%M %{$fg[red]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 # History in cache directory:
 HISTSIZE=10000
@@ -22,5 +24,10 @@ _comp_options+=(globdots)		# Include hidden files.
 # Emacs binding
 bindkey -e
 
+export PATH=$PATH:$HOME/.local/bin
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+figlet 'Optiplex' && fortune | cowsay && neofetch --ascii_distro ubuntu_small --cpu_temp C
 
-source "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+eval "$(oh-my-posh init zsh --config $HOME/.dotfiles/ohmyposh/zen.toml)"
+eval "$(zoxide init --cmd cd zsh)"
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
